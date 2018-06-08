@@ -22,7 +22,7 @@ function showRepositories(event, data) {
          <h2>${r.name}</h2>
           <a href="${r.html_url}">${r.html_url}</a><br>
           <a href="#"${repoName}${userName} onclick="getDetails(this)">Get Details</a><br>
-          <a href="#"${repoName}${userName} onclick="getBranches(this)">Get Branches</a><br>
+          <a href="#"${repoName}${userName} onclick="getBranches(this)">Get Branches</a><br></li>
           </li>`)
 
    }).join('')+""</ul>""
