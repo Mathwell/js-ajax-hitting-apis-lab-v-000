@@ -13,8 +13,19 @@ function getRepositories() {
 function showRepositories(event, data) {
   //this is set to the XMLHttpRequest object that fired the event
   var repos = JSON.parse(this.responseText)
-  console.log(repos)
-  const repoList = `<ul>${repos.map(r => '<li>' + r.name + ' - <a href="#" data-repo="' + r.name + '" onclick="getDetails(this)">Get Details</a></li>').join('')}</ul>`
+  //console.log(repos)
+  const repoList = "<ul>"+${repos.map(r =>{
+    const username='username"'+r.owner.login+'"'
+    const repoName='repository"'+r.name+'"'
+    return(
+     `<li>
+         <h2>${r.name}</h2>
+          <a href="${r.html_url}">${r.html_url}</a><br>
+          <a href="#"${repoName}${userName} onclick="getDetails(this)">Get Details</a><br>
+          <a href="#"${repoName}${userName} onclick="getBranches(this)">Get Branches</a><br>
+          </li>`
+
+   }).join('')+""</ul>""
   document.getElementById("repositories").innerHTML = repoList
 }
 
