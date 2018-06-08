@@ -30,10 +30,11 @@ function showRepositories(event, data) {
 }
 
 function getDetails(el) {
-  const name = el.dataset.repo
+  const name = el.dataset.repository
+  const uri=rootURL+"/repos/"+el.dataset.username+"/"+name+"/commits"
   const req = new XMLHttpRequest()
   req.addEventListener("load", showDetails)
-  req.open("GET", 'https://api.github.com/repos/octocat/' + name + '/commits')
+  req.open("GET", uri)
   req.send()
 }
 
