@@ -30,12 +30,12 @@ function showRepositories(event, data) {
 }
 
 function getDetails(el) {
-  const name = el.dataset.repository
-  const uri=rootURL+"/repos/"+el.dataset.username+"/"+name+"/commits"
-  const req = new XMLHttpRequest()
-  req.addEventListener("load", showDetails)
-  req.open("GET", uri)
-  req.send()
+  const repoName = el.dataset.repository
+    const uri = rootURL + "/repos/" + el.dataset.username + "/" + repoName + "/commits"
+    const xhr = new XMLHttpRequest()
+    xhr.addEventListener("load", displayCommits)
+    xhr.open("GET", uri)
+    xhr.send()
 }
 
 function showDetails() {
