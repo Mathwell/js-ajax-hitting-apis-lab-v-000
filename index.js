@@ -30,7 +30,7 @@ function showRepositories(event, data) {
 }
 
 function getDetails(el) {
-  const repoName = el.dataset.repository
+  const repoName = el.dataset.repo
     const uri = rootURL + "/repos/" + el.dataset.username + "/" + repoName + "/commits"
     const xhr = new XMLHttpRequest()
     xhr.addEventListener("load", showDetails)
