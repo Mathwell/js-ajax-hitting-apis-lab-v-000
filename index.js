@@ -1,3 +1,5 @@
+const rootURL="http://api.github.com"
+
 function getRepositories() {
   const req = new XMLHttpRequest()
   req.addEventListener("load", showRepositories);
