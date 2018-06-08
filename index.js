@@ -15,7 +15,7 @@ function showRepositories(event, data) {
   var repos = JSON.parse(this.responseText)
   console.log(repos)
   const repoList = "<ul>"+repos.map(r =>{
-    const username='username"'+r.owner.login+'"'
+    const userName='username"'+r.owner.login+'"'
     const repoName='repository"'+r.name+'"'
     return(
      `<li>
